@@ -1,6 +1,8 @@
 
 # Regulatory & Policy Copilot — Agentic RAG (Multi-hop, Section-Cited)
 
+![alt text](image.png)
+
 An agentic RAG that answers complex compliance questions from regulatory PDFs/HTML with a **planner → retriever → answerer → critic → repair** loop, **hybrid retrieval (BM25 + dense + cross-encoder rerank)**, and **inline section-level citations** like `[privacy_act_2024 §3.1]`.
 
 
