@@ -1,0 +1,55 @@
+[project]
+name = "regulatory-copilot"
+version = "0.1.0"
+description = "Agentic RAG — Regulatory & Policy Copilot"
+requires-python = ">=3.10"
+dependencies = [
+  "fastapi==0.115.5",
+  "uvicorn[standard]==0.32.0",
+  "pydantic==2.9.2",
+  "python-dotenv==1.0.1",
+  "httpx==0.27.2",
+
+  # Agents / graphs
+  "langgraph==0.2.44",
+  "langchain==0.3.7",
+  "langchain-community==0.3.7",
+
+  # Retrieval
+  "faiss-cpu==1.8.0.post1",
+  "rank-bm25==0.2.2",
+  "sentence-transformers==3.1.1",
+  "numpy==1.26.4",
+  "scikit-learn==1.5.2",
+
+  # Reranker
+  "transformers==4.45.2",
+  "accelerate==1.11.0",
+
+  # Parsing / PDFs
+  "pypdf==5.0.0",
+  "beautifulsoup4==4.12.3",
+  "lxml==5.3.0",
+
+  # Optional UI & evals
+  "streamlit==1.39.0",
+  "ragas==0.1.4",
+  "trulens-eval==1.0.9",
+  
+  # Groq SDK
+  "groq==0.13.1",
+]
+
+# pyproject.toml — replace/add exactly these blocks
+
+[tool.uv]
+package = false
+
+[build-system]
+requires = ["setuptools>=68", "wheel"]
+build-backend = "setuptools.build_meta"
+
+[tool.setuptools.packages.find]
+include = ["app*"]
+exclude = ["data*", "evals*", "scripts*"]
+

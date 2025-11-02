@@ -1,0 +1,27 @@
+# Python / build
+__pycache__/
+*.pyc
+*.pyo
+*.pyd
+.build/
+dist/
+
+# Envs & tools
+.venv/
+.env
+.env.*
+
+# Vector store / caches / HF
+.vectorstore/
+.cache/
+huggingface/
+C:/Users/*/.cache/huggingface/
+
+# OS/IDE
+.DS_Store
+Thumbs.db
+.idea/
+.vscode/
+
+# Logs
+*.log
